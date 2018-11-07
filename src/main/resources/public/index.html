@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Chat-Exemplo</title>
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Chat-Exemplo</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+	
 
-<div id="chatControls">
-    <input id="message" placeholder="digita sua mensagem">
-    <button id="send">Enviar</button>
-</div>
-<ul id="userlist"></ul>
-<div id="chat"></div>
-
-<script src="socket.js"></script>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Cadastre-se</button>
+	
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Cadastre-se</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="recipient-name" class="col-form-label">Email</label>
+	            <input type="text" class="form-control" id="email" name="email" placeholder="digite o seu email...">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="col-form-label">Senha:</label>
+	            <input type="password" class="form-control" id="password" name="password" placeholder="digite sua senha...">
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" onclick="addUser()">Salvar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/user/user.js"></script>	
 </body>
 </html>

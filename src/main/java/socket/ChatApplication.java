@@ -16,6 +16,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.eclipse.jetty.websocket.api.Session;
 import org.json.JSONObject;
 
+import controller.UserController;
+
 public class ChatApplication {
 
 	static Map<Session, String> users = new ConcurrentHashMap<>();
@@ -29,6 +31,7 @@ public class ChatApplication {
 		//get("/chat", (req, res) -> "Hello");
 		webSocket("/api/chat", ChatWebSocketHandler.class);
 		//port(8081);
+		new UserController();
         init();		
 	}
 
