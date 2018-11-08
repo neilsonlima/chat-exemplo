@@ -21,3 +21,25 @@ function addUser(){
 		}
 	)
 }
+
+function login(){
+	
+	let data = {
+		email: $('#email').val(),
+		password: $('#password').val()
+	}
+	
+	$.post(
+		url + '/api/user/login', 
+		data,
+		function(result, status){
+			if(result === 'success'){
+				document.location = 'chat.html'
+			} else {
+				alert('Usuário ou Senha inválidos!')
+			}
+			
+		}
+)	
+	
+}

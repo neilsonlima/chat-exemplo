@@ -1,9 +1,12 @@
 package model;
-
+/**
+ * @author neilsonlima@gmail.com
+ *
+ */
 public class UserModel {
 	private int id;
 	private String email;
-	private String password;
+	private String cpf;
 	
 	public int getId() {
 		return id;
@@ -17,16 +20,16 @@ public class UserModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
+	public String getCpf() {
+		return cpf;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
-	public UserModel(int id, String email, String password) {
+	public UserModel(int id, String email, String cpf) {
 		this.id = id;
 		this.email = email;
-		this.password = password;
+		this.cpf = cpf;
 	}
 	public UserModel() {}
 }

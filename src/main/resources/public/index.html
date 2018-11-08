@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Chat-Exemplo</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Chat-Exemplo</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
 <body>
 	
 
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Cadastre-se</button>
+	
+	<h1>Login</h1>
+    <form>
+      <div class="form-group">
+        <label for="recipient-name" class="col-form-label">Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="digite o seu email...">
+      </div>
+      <div class="form-group">
+        <label for="message-text" class="col-form-label">Senha:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="digite sua senha...">
+      </div>
+      <button type="button" class="btn btn-success" onclick="login()">Entrar</button>
+    </form>	
 	
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
