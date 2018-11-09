@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<hibernate-mapping>
+	<class table="users" lazy="false" name="model/UserModel">
+		<id column="id" type="int" name="id">
+			<generator class="increment" />
+		</id>
+		<property name="email" />
+		<property name="cpf" />
+	</class>
+</hibernate-mapping>

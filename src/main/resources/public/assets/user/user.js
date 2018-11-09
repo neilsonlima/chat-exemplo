@@ -6,7 +6,7 @@ const url = 'http://localhost:4567'
 function addUser(){
 	let data = {
 		email:  $('#email').val(),
-		password: $('#password').val()
+		cpf: $('#cpf').val()
 	}
 	$.post(
 		url + '/api/user', 
@@ -26,7 +26,7 @@ function login(){
 	
 	let data = {
 		email: $('#email').val(),
-		password: $('#password').val()
+		cpf: $('#cpf').val()
 	}
 	
 	$.post(
