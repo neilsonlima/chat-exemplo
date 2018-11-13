@@ -1,7 +1,11 @@
 package model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author neilsonlima@gmail.com
@@ -12,12 +16,19 @@ import javax.persistence.Table;
 @Table(name="users")
 public class UserModel {
 	private int id;
+	
+	@NotNull
 	private String email;
+	
+	@NotNull
 	private String cpf;
 	
 	/**
 	 * @return the id
 	 */
+	@Id
+	//@Column(name="user_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}

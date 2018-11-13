@@ -5,19 +5,25 @@ const url = 'http://localhost:4567'
 	
 function addUser(){
 	let data = {
-		email:  $('#email').val(),
-		cpf: $('#cpf').val()
+		email:  $('#user_email').val(),
+		cpf: $('#user_cpf').val()
 	}
+	console.log(data)
 	$.post(
 		url + '/api/user', 
 		data,
 		function(result, status){
-			//if(result === ''){
-			//	
-			//} else {
-				
-			//}
-			alert(result)
+			console.log(result)
+			if(result){
+				if(result == 'success'){
+					$("#closeModal").click()
+					alert('Cadastro realizado com sucesso!')
+				} else {
+					alert('Não foi possivel cadastrar!')
+				}
+			} else {
+				alert('Error de cadastro!!')
+			}
 		}
 	)
 }
@@ -33,13 +39,17 @@ function login(){
 		url + '/api/user/login', 
 		data,
 		function(result, status){
-			if(result === 'success'){
-				document.location = 'chat.html'
+			console.log(result)
+			if(result){
+				if(result == 'success'){
+					document.location = 'chat.html'
+				} else {
+					alert('Usuário ou Senha inválidos!')
+				}
 			} else {
-				alert('Usuário ou Senha inválidos!')
+				alert('Error de login')
 			}
-			
 		}
-)	
+	)	
 	
 }

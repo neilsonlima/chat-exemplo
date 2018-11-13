@@ -28,9 +28,7 @@ public class ChatApplication {
 		staticFileLocation("/public");
 		staticFiles.expireTime(600);
 
-		//get("/chat", (req, res) -> "Hello");
 		webSocket("/api/chat", ChatWebSocketHandler.class);
-		//port(8081);
 		new UserController();
         init();		
 	}

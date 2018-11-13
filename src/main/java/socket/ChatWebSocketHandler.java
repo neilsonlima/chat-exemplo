@@ -8,7 +8,9 @@ import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 @WebSocket
 public class ChatWebSocketHandler {
+	@SuppressWarnings("unused")
 	private String sender;
+	@SuppressWarnings("unused")
 	private String msg;
 
 	@OnWebSocketConnect
